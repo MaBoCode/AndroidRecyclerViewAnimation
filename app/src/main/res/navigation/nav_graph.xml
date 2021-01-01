@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="fr.example.androidrecyclerviewanimation.MainFragment"
+        android:label="frg_main"
+        tools:layout="@layout/frg_main" >
+        <action
+            android:id="@+id/to_destination_fragment"
+            app:destination="@id/destinationFragment"
+            app:exitAnim="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationFragment"
+        android:name="fr.example.androidrecyclerviewanimation.DestinationFragment"
+        android:label="frg_destination"
+        tools:layout="@layout/frg_destination" >
+        <argument
+            android:name="destination"
+            android:defaultValue="@null"
+            app:nullable="true"
+            app:argType=".Destination" />
+    </fragment>
+</navigation>
